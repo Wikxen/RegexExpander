@@ -53,6 +53,21 @@ namespace RegexExpander
                     parts.Add(new List<char>(rx.ToCharArray()));
                 }
             }
+
+            bool first = true;
+            foreach (var line in Recurse(stub, 1, parts))
+            {
+                if (!first)
+                {
+                    Console.WriteLine();
+                }
+                else
+                {
+                    first = false;
+                }
+                
+                Console.Write(line);
+            }
         }
 
         public static List<string> Recurse(string stub, int level, List<List<char>> parts)
