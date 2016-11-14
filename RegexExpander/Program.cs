@@ -54,5 +54,29 @@ namespace RegexExpander
                 }
             }
         }
+
+        public static List<string> Recurse(string stub, int level, List<List<char>> parts)
+        {
+            if (level == parts.Count)
+            {
+                List<string> output = new List<string>();
+                foreach (var bit in parts[level - 1])
+                {
+                    output.Add(stub + bit);
+                }
+
+                return output;
+            }
+            else
+            {
+                List<string> output = new List<string>();
+                foreach (var bit in parts[level - 1])
+                {
+                    output.AddRange(Recurse(stub + bit, level + 1, parts));
+                }
+
+                return output;
+            }
+        }
     }
 }
