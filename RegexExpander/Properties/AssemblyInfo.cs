@@ -6,9 +6,9 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("RegexExpander")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Command line tool to expand simple finite regex expressions")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Wikxen")]
 [assembly: AssemblyProduct("RegexExpander")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
